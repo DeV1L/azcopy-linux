@@ -4,7 +4,8 @@
 # Usage
 
 ```
-# docker run --name azcopy azcopy-linux azcopy /Source:https://myaccount1.file.core.windows.net/myfileshare/ /Dest:https://myaccount2.blob.core.windows.net/mycontainer/ /SourceKey:key1 /DestKey:key2 /S
+#Example: backup Azure Files to Azure Blobs
+# docker run --name azcopy dev1l/azcopy-linux azcopy --source https://$SOURCE_STORAGE_ACCOUNT_NAME.file.core.windows.net/$SHARE_NAME --destination https://DESTINATION_STORAGE_ACCOUNT_NAME.blob.core.windows.net/$BLOB_CONTAINER_NAME --source-key SOURCE_STORAGE_ACCOUNT_KEY --dest-key DESTINATION_STORAGE_ACCOUNT_KEY --recursive
 ```
 
 Details: https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux
